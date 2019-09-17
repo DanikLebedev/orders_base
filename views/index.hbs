@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Список пользователей</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/materialize.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Список Заказов</h1>
+        <p><a class="btn waves-effect grey darken-3" href="/create">Добавить заказ</a></p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Article</th>
+                <th>Price</th>
+                <th>Photo Link</th>
+                <th>Date</th>
+            </tr>
+            {{#each users}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.article}}</td>
+                <td>{{this.price}} рублей</td>
+                <td>{{this.photo}}</a></td>
+                <td>{{this.date}}</td>
+                <td>
+                    <a class="btn waves-effect blue darken-1" href="/edit/{{this.id}}">Edit</a>
+                    <form action="delete/{{this.id}}" method="POST" style="display:inline;">
+                        <input type="submit" class="btn waves-effect purple darken-3" value="Delete" />
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</body>
+<html>

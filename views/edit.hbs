@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Редактирование пользователя</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/materialize.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Редактирование заказа</h1>
+        <form action="/edit" method="POST">
+            <div class="input-field col s6">
+                <input type="hidden" name="id" value="{{user.id}}" />
+                <label>Цена</label><br>
+                <input name="price" value="{{user.price}}" class="field" /><br><br>
+                <button class="waves-effect purple accent-1t btn" type="submit" />Отправить</button>
+            </div>
+
+        </form>
+        <a class="waves-effect waves-light btn" href="/">К списку заказов</a>
+
+    </div>
+    <script src="/js/materialize.min.js"></script>
+</body>
+<html>

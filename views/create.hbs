@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link type="text/css" href="css/style.css">
+    <title>База заказов</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s4">
+            <h4 class="main title">Добавить заказ</h4>
+            <form method="POST">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input name='name' id="name_customer" type="text" class="validate">
+                        <label for="name_customer">Имя заказчика</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input name='article' id="article" type="text" class="validate">
+                        <label for="article">Артикул товара</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input name='price' id="price" type="text" class="validate">
+                        <label for="price">Цена товара</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s10">
+                        <input name='photo' id="photo" type="text" class="validate">
+                        <label for="photo">Ссылка на фото товара</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input name='date' id="date" type="text" class="datepicker">
+                        <label for="date">Дата заказа</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect red darken-3" type="submit" id="add" name="action">
+                    Добавить
+                </button>
+            </form>
+        </div>
+        <div class="col s4">
+            <h4>Калькулятор стоимости</h4>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="price_netto" type="text" class="validate">
+                    <label for="price_netto">Цена Нетто</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="price_delivery" type="text" class="validate">
+                    <label for="price_delivery">Цена доставки</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6"> Конечная цена:
+                    <input id="price_total" type="text" class="validate">
+                    <label for="price_total"></label>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn waves-effect purple darken-3" id="calc">
+                    Расчет
+                </button>
+            </div>
+        </div>
+        <div class="col s4">
+            <h4>Информация о заказе</h4>
+            <a href="/" class="btn waves-effect deep-purple darken-4">
+                Показать все заказы
+            </a>
+        </div>
+    </div>
+    </div>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/calculate.js"></script>
+</body>
+
+</html>

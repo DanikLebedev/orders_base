@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+}
+
+input {
+    border-radius: 10px;
+}
+
+body {
+    background: red;
+}
